@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Organisations List</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-danger">
+                                <tr>
+                                    <th>UserName</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let organisation of organisations">
+                                    
+                                    <td><a routerLink="/organisations/{{organisation.orgId}}" routerLinkActive="active"
+                                       (click)="onSelect(user)">{{organisation.username}}</a></td>
+                                    <td>{{organisation.email}}</td>
+                                    <td>{{organisation.phone}}</td>
+                                    <td>{{organisation.address}}</td>
+                                </tr>     
+                            </tbody>
+                        </table>
+                        <div>
+                            <button class="btn btn-danger pull-right" (click)="addOrganisation()">Add User</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

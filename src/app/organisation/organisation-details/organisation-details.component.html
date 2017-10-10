@@ -1,0 +1,43 @@
+<div class="main-content">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">Organisation Details</h4>
+                </div>
+                <div class="card-content">
+                    <table class="table table responsive">
+                        <tr>
+                            <td>Organisation Name:</td>
+                            <td>{{organisation.orgName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>{{organisation.orgcontactperson}}</td>
+                        </tr>  
+                        <tr>
+                            <td>Mobile:</td>
+                            <td>{{organisation.mobile}}</td>
+                        </tr> 
+                        <tr>
+                            <td>Email:</td>
+                            <td>{{organisation.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td>{{organisation.address}}</td>
+                        </tr>   
+                        <tr>
+                            <td>Role:</td>
+                            <td>{{organisation.role}}</td>
+                        </tr>        
+                    </table>
+                    <button class="btn btn-danger pull-right" (click)="gotoOrganisationsList()"> Back</button>
+                    <button class="btn btn-danger pull-right" (click)="editOrganisation()">Edit Organisation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

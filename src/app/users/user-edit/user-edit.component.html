@@ -1,0 +1,89 @@
+
+
+<div class="main-content">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">Edit User Details</h4>
+                    <p class="category">Complete your profile</p>
+                </div>
+                <div class="card-content">
+                    <form (ngSubmit)="onSubmit(userForm.value)" #userForm="ngForm">
+                        
+                        <div class="row">    
+                            <div class="col-md-6">
+                                <div class="form-group form-black ">
+                                
+                                    <label class="control-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" [(ngModel)]="user.email" 
+                                     required name="email" #email="ngModel"/>
+                                </div>
+                              <!--  <small *ngIf="!userForm.controls.username.valid && userForm.controls.username.touched">
+                                    Username is Required.
+                                </small>-->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black ">
+                                    <label class="control-label">UserName</label>
+                                    <input type="text" class="form-control" value="avf" id="username" [(ngModel)]="user.username" required name="username" #username="ngModel"/>
+                                </div>
+                                <!-- <small class="error-message" 
+                                     *ngIf="!userForm.controls.email.valid  && userForm.controls.email.dirty">
+                                     <p>Please Enter a Valid Email.</p>
+                                </small>-->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-black ">
+                                    <label class="control-label">Phone</label>
+                                    <input type="number" class="form-control" id="phone" [(ngModel)]="user.phone" required name="phone" #phone="ngModel"/>
+                                </div>
+                               <!-- <small *ngIf="userForm.controls.phone.valid && userForm.controls.phone.dirty">Please Enter a Valid Phone Number</small>-->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black ">
+                                    <label class="control-label">Branch</label>
+                                    <input type="text" class="form-control" id="branch" [(ngModel)]="user.branch" required name="branch" #branch="ngModel"/>
+                                </div>
+                               <!-- <small *ngIf="!userForm.controls.branch.valid && userForm.controls.branch.touched">
+                                    Branch is Required.
+                                </small>-->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-black ">
+                                    <label class="control-label">Adress</label>
+                                    <input type="text" class="form-control" id="address" [(ngModel)]="user.address" required name="address" #address="ngModel"/>
+                                </div>
+                               <!-- <small *ngIf="!userForm.controls.address.valid && userForm.controls.address.touched">
+                                    Address is Required.
+                                </small>-->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black">
+                                    <label class="control-label">Postal Code</label>
+                                    <input type="text" class="form-control" id="pincode" [(ngModel)]="user.pincode" required name="pincode" #pincode="ngModel"/>
+                                </div>
+                                <!--<small *ngIf="!userForm.controls.pincode.valid && userForm.controls.pincode.touched">
+                                   Pin Code is Required.
+                                </small>-->
+                            </div>
+                        </div>
+
+                         <button class="btn btn-danger pull-right" (click)="gotoUserDetail(user)">Back</button>
+                        <button type="submit" class="btn btn-danger pull-right">Submit</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

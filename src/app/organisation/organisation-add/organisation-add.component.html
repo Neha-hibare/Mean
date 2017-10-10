@@ -1,0 +1,65 @@
+<div class="main-content">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">Add Organisation <a class="pull-right" [routerLink]="['/organisations']">Back</a></h4>
+                    <p class="category">Complete your profile</p>
+                </div>
+                <div class="card-content">
+                    <form (ngSubmit)="onSubmit(organisationForm.value)" #userForm="ngForm">
+                        <div class="row">
+                             <div class="col-md-6">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Org Name</label>
+                                    <input type="text" class="form-control" id="orgName" [(ngModel)]="organisation.orgName" name="orgName" required #orgName="ngModel"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Org Person Name</label>
+                                    <input type="text" class="form-control" id="orgcontactperson" [(ngModel)]="organisation.orgcontactperson" name="orgcontactperson" required #orgcontactperson="ngModel"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Mobile Number</label>
+                                    <input type="number" class="form-control" id="mobile" [(ngModel)]="organisation.mobile" name="mobile" required #mobile="ngModel"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Email</label>
+                                    <input type="email" class="form-control" id="email" [(ngModel)]="organisation.email" name="email" required #email="ngModel"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                             <div class="col-md-6">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Address</label>
+                                    <input type="text" class="form-control" id="address" [(ngModel)]="organisation.address" name="address" required #address="ngModel"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Role</label>
+                                    <input type="text" class="form-control" id="role" [(ngModel)]="organisation.role" name="role" required #role="ngModel"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger pull-right">Submit</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
